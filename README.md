@@ -7,9 +7,28 @@ The model segments lane markings from road images and overlays them on videos, h
 
 ## 🧠 Project Overview
 
-The system uses a **U-Net Convolutional Neural Network** trained to identify lane markings in road images.  
-Due to the large size of real datasets (like TuSimple), a **synthetic dataset** is generated for training.  
-Once trained, the model can be used to run inference on any road video to detect and visualize lanes.
+The system uses a **U-Net Convolutional Neural Network** trained to identify lane markings in real road images.
+The model is trained on the original **TuSimple Lane Detection dataset**, which contains real highway driving videos with lane annotations.
+Once trained, the model can be used to run inference on any road video to detect and **visualize lane lines** accurately.
+
+
+```
+
+## 📊 Dataset
+
+This project uses the **TuSimple Lane Detection Dataset**, a widely used benchmark for autonomous driving lane detection.
+
+- **Source:** [TuSimple Lane Detection Challenge Dataset](https://github.com/TuSimple/tusimple-benchmark)  
+- **Description:** The dataset contains over **6,000 highway driving images** captured under various lighting and weather conditions.  
+- **Annotations:** Each image has corresponding **lane line coordinates** labeled across multiple frames, allowing temporal and spatial lane tracking.  
+
+### 🧹 Data Preprocessing
+- All input images were **resized to 256×256 pixels** to fit the U-Net input size.  
+- The data was divided into **training (80%)** and **validation (20%)** sets.  
+- Images were **normalized** to a [0, 1] range for stable neural network training.  
+- Data augmentation techniques like **horizontal flips** and **brightness adjustments** were optionally applied to improve model generalization.
+
+```
 
 
 ## ⚙️ Requirements
