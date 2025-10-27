@@ -1,11 +1,11 @@
-# 🛣️ Lane Detection using U-Net
+# Lane Detection using U-Net
 
 This project implements **lane detection** using a **U-Net deep learning model**.  
 The model segments lane markings from road images and overlays them on videos, highlighting detected lanes in **green**.
 
 ---
 
-## 🧠 Project Overview
+## Project Overview
 
 The system uses a **U-Net Convolutional Neural Network** trained to identify lane markings in real road images.
 The model is trained on the original **TuSimple Lane Detection dataset**, which contains real highway driving videos with lane annotations.
@@ -14,7 +14,7 @@ Once trained, the model can be used to run inference on any road video to detect
 
 ```
 
-## 📊 Dataset
+## Dataset
 
 This project uses the **TuSimple Lane Detection Dataset**, a widely used benchmark for autonomous driving lane detection.
 
@@ -31,15 +31,6 @@ This project uses the **TuSimple Lane Detection Dataset**, a widely used benchma
 ```
 
 
-## ⚙️ Requirements
-
-Install dependencies before running any file:
-
-```
-pip install tensorflow numpy opencv-python matplotlib scikit-learn
-```
-
----
 
 ## 🚀 How to Run
 
@@ -69,15 +60,7 @@ python lane_detection_inference.py
 
 ---
 
-### 3️⃣ Run Clean Inference (Final Output)
 
-For fast, clean lane detection:
-```bash
-python main.py
-```
-- Input video: `input.mp4`
-- Output video: `output_video.mp4`
-- Shows final lane detection result only (no debug visuals).
 
 
 ## 🧩 Model Architecture
@@ -89,8 +72,3 @@ The **U-Net** consists of:
 
 ---
 
-## 📈 Output Example
-
-After running inference, the system outputs a video where:
-- Lane markings are highlighted in **green**.
-- The model focuses on the **bottom 45% of the frame**, improving road-level accuracy.
